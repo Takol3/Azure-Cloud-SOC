@@ -1,5 +1,6 @@
 # Building a SOC + Honeynet in Azure (Live Traffic)
-![Cloud Honeynet / SOC](https://i.imgur.com/ZWxe03e.jpg)
+![Overlay](https://github.com/Takol3/Azure-Cloud-SOC/assets/152481497/b093b7b4-54d6-424c-9d74-6cec84df11f5)
+ 
 
 ## Introduction
 
@@ -42,9 +43,13 @@ In the subsequent phase, a comprehensive hardening strategy was employed. Networ
 
 
 ## Attack Maps Before Hardening / Security Controls
-![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/1qvswSX.png)<br>
-![Linux Syslog Auth Failures](https://i.imgur.com/G1YgZt6.png)<br>
-![Windows RDP/SMB Auth Failures](https://i.imgur.com/ESr9Dlv.png)<br>
+![Before -windows-rdp-auth-fail](https://github.com/Takol3/Azure-Cloud-SOC/assets/152481497/5283c09b-04e0-4838-9be9-7e3e75e5993e)
+<br>
+![Before -nsg-malicious-allowed-in](https://github.com/Takol3/Azure-Cloud-SOC/assets/152481497/30dd41be-558e-4dd4-8388-57e11006e9ff)
+<br>
+![Before -linux-ssh-auth-fail](https://github.com/Takol3/Azure-Cloud-SOC/assets/152481497/ff7bcd8a-9050-4127-a2e8-a8c0d3bedfcb)
+<br>
+
 
 ## Metrics Before Hardening / Security Controls
 
@@ -60,9 +65,12 @@ Stop Time 2023-12-01T20:28:21.6191213Z
 | SecurityIncident         | 133
 | AzureNetworkAnalytics_CL | 0
 
-## Attack Maps Before Hardening / Security Controls
+## Attack Maps After Hardening / Security Controls
+![After -windows-rdp-auth-fail](https://github.com/Takol3/Azure-Cloud-SOC/assets/152481497/7f65e259-a8d8-4734-bd31-70b18a71568c)
+![After -linux-ssh-auth-fail](https://github.com/Takol3/Azure-Cloud-SOC/assets/152481497/69688445-cf81-40fe-b4cb-b5b95bb4331a)
 
-```All map queries actually returned no results due to no instances of malicious activity for the 24 hour period after hardening.```
+
+```The rest of the map queries actually returned no results due to no instances of malicious activity for the 24 hour period after hardening.```
 
 ## Metrics After Hardening / Security Controls
 
@@ -72,7 +80,7 @@ Stop Time	12/4/2023 5:29:46
 
 | Metric                   | Count
 | ------------------------ | -----
-| SecurityEvent            | 738
+| SecurityEvent            | 4
 | Syslog                   | 12
 | SecurityAlert            | 0
 | SecurityIncident         | 0
