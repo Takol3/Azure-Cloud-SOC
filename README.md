@@ -70,7 +70,7 @@ Stop Time 2023-12-01T20:28:21.6191213Z
 ![After -linux-ssh-auth-fail](https://github.com/Takol3/Azure-Cloud-SOC/assets/152481497/69688445-cf81-40fe-b4cb-b5b95bb4331a)
 
 
-```The rest of the map queries actually returned no results due to no instances of malicious activity for the 24 hour period after hardening.```
+```The rest of the map queries returned no results due to no instances of malicious activity for the 24 hour period after hardening.```
 
 ## Metrics After Hardening / Security Controls
 
